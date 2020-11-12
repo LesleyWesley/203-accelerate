@@ -11,6 +11,40 @@ Text Domain:  accelerate-theme-child
 */
 
 
-body {
-  background: purple;
+.home-page {
+    background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+}
+
+#masthead {
+  background: none repeat scroll 0 0 #45AC9D;
+}
+
+.button {
+	background: #45AC9D;
+}
+
+/* Front Page Blog Post Section */
+
+.blog-post {
+  width: 50%;
+  float: left;
+  margin-bottom: 2em;
+}
+
+.blog-post h4 {
+  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial sans-serif;
+  color: #A6A6A6;
+  text-transform: uppercase;
+  margin: 2em 0 .5em;
+}
+
+.blog-post h3 {
+  font-size: 1.5em;
+}
+
+.read-more-link {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #45AC9D;
+  text-transform: uppercase;
 }
