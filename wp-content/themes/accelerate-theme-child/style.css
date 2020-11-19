@@ -49,6 +49,31 @@ Text Domain:  accelerate-theme-child
   text-transform: uppercase;
 }
 
+/* Front Page Featured Work Section */
+
+.featured-work h4 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: light;
+}
+
+.featured-work h3 {
+  font-size: .75em;
+  text-align: center;
+  margin-top: 15px;
+  max-width: 90%;
+  margin-bottom: 75px;
+}
+
+.featured-work img {
+  max-width: 90%;
+}
+
+.individual-featured-work {
+  list-style: none;
+  float: left;
+}
+
 /*Case Studies */
 
 
