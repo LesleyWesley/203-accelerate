@@ -80,12 +80,13 @@ Text Domain:  accelerate-theme-child
 
 aside.case-study-sidebar {
   float: left;
-  width: 275px;
+  width: 350px;
+  margin-bottom: 150px;
 }
 
 div.case-study-images {
   float: right;
-  width: 606px;
+  width: 550px;
 }
 
 .case-study h2 {
@@ -115,8 +116,24 @@ div.case-study-images {
   font-weight: 700;
   color: #45AC9D;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 
 .case-study img {
   margin: 50px 0;
+  width: 550px;
+}
+
+/*Case Study Archive */
+
+aside.case-study-sidebar h2 {
+  font-size: 1.47em;
+  font-weight: 400;
+  margin-top: 125px;
+}
+
+
+
+aside.case-study-sidebar p {
+  font-size: .9em;
 }
