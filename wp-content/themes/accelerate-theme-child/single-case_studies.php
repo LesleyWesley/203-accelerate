@@ -30,9 +30,9 @@ get_header(); ?>
             <aside class="case-study-sidebar">
                 <h2><?php the_title(); ?></h2>
                 <h4><?php echo $services; ?></h4>
-                <h4><span>Client: <?php echo $client; ?></span</h4>
+                <h4><span>Client: <?php echo $client; ?></span></h4>
 
-                <?php the_content(); ?>
+                <p><?php the_content(); ?></p>
 
                 <p><strong><a href="<?php echo $link; ?>">Visit Live Site > </a></strong><p>
 
