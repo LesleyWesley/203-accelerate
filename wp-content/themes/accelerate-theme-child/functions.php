@@ -14,13 +14,16 @@
 function accelerate_child_scripts(){
 	wp_enqueue_style( 'accelerate-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'accelerate-style' ));
+	wp_enqueue_style('accelerate-child-google-fonts',"//fonts.googleapis.com/css2?family=Lobster&display=swap"
+);
 }
-add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
+add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts', 'accelerate-child-google-fonts' );
 
 //Custom post types functions
 
-//Create a Case Study custom post type
 function create_custom_post_types() {
+
+	//Create a Case Study Custom Post type
     register_post_type( 'case_studies',
         array(
             'labels' => array(
@@ -32,5 +35,38 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+
+//Create a services Custom Post type
+register_post_type('our_services',
+		array(
+				'labels' => array (
+					'name' => __('Our Services'),
+					'singular_name' => __('Our Service' )
+				),
+				'public' => true,
+				'has_archive' => true,
+				'rewrite' => array(
+						'slug' => 'about'
+				),
+		)
+);
+
 }
+
 add_action( 'init', 'create_custom_post_types' );
+
+
+function accelerate_theme_child_widget_init() {
+
+	register_sidebar( array(
+	    'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+	    'id' => 'sidebar-2',
+	    'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+	    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    'after_widget' => '</aside>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );

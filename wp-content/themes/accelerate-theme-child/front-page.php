@@ -64,4 +64,19 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<section class="latest-tweet">
+		<div class="site-content">
+			<div class="tweet-post">
+				<h4 class="tweet-heading">Recent Tweet</h4>
+				<h3>@Accelerate</h3>
+				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+						<div id="secondary" class="widget-area" role="complementary">
+							<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						</div>
+				<?php endif; ?>
+				<h5>Follow Us > </h5>
+			</div>
+		</div>
+	</section>
+
 <?php get_footer(); ?>
